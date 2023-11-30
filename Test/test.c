@@ -15,10 +15,10 @@ int main(void) {
     size_t len = 0;
 
     while(getline(&line, &len, fp) != -1) {
-        printf("line length: %zd\n", strlen(line));
-    }
+        printf("%c\n", line[3]);
+        //printf("%c\n", line[1]);
 
-    printf("\n\nMax line size: %zd\n", len);
+    }
 
     fclose(fp);
     free(line);     // getline will resize the input buffer as necessary
